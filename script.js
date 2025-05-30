@@ -4,7 +4,7 @@ var timerDisplay = document.getElementById("timer");
 const statusMessage = document.getElementById("statusMessage");
 
 const totalCells = 25;
-const safeCellCount = 12;
+
 
 let countdownInterval = null;
 let countdownTime = 60;
@@ -30,6 +30,9 @@ function predictSafeCells() {
   predictBtn.disabled = true;
   predictBtn.style.opacity = 0.4;
   predictBtn.style.cursor = "pointer";
+  const safeCellSelector = document.getElementById("safeCellSelector");
+  const safeCellCount = parseInt(safeCellSelector.value);
+
   createGrid();
 
 function getDistributedSafeIndices(rows, cols, safeCount) {
@@ -124,7 +127,7 @@ function getDistributedSafeIndices(rows, cols, safeCount) {
 }
 
 // Example usage:
-const safeIndices = getDistributedSafeIndices(5, 5, 12);
+const safeIndices = getDistributedSafeIndices(5, 5, safeCellCount);
 
   document.querySelectorAll(".cell").forEach((cell, index) => {
     if (safeIndices.has(index)) {
