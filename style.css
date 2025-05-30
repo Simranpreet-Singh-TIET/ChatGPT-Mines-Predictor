@@ -149,7 +149,7 @@ button:hover {
 
 .navbar {
   width: 100%;
-  padding-top: 10px;
+  
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #0f0f0f, #1a1a1a);
   color: white;
@@ -227,6 +227,9 @@ button:hover {
 @media (max-width: 1024px) {
   * {
     margin: 5px;
+  }
+  .navbar{
+    margin:0;
   }
   .arrow {
     margin: 0;
